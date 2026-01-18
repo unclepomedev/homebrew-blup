@@ -1,25 +1,25 @@
 class Blup < Formula
   desc "The Blender Version Manager"
   homepage "https://github.com/unclepomedev/blup"
-  version "0.0.7"
+  version "0.0.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/unclepomedev/blup/releases/download/v0.0.7/blup-aarch64-apple-darwin.tar.xz"
-      sha256 "c5695a1b68d05e4d1b095c2bc5904815068829885ee62bc8fa43a3478f634dab"
+      url "https://github.com/unclepomedev/blup/releases/download/v0.0.8/blup-aarch64-apple-darwin.tar.xz"
+      sha256 "93a1132828955b95448e321e776602ebf83492cc2fddcad0ea02b2fa9e81aca0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/unclepomedev/blup/releases/download/v0.0.7/blup-x86_64-apple-darwin.tar.xz"
-      sha256 "6b95ba14bfa2e1ca73b2775f48f1ab3bc9b2fe1ebdcd6bf552ddff9828f883aa"
+      url "https://github.com/unclepomedev/blup/releases/download/v0.0.8/blup-x86_64-apple-darwin.tar.xz"
+      sha256 "bb8c45051b7f442c9b1d209364e328b845b08961c4005cf8f04480578407aa20"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/unclepomedev/blup/releases/download/v0.0.7/blup-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "cc890309451168749f3e91f8379e85a9748158e1fc9de6bd3f154a37aa1c79a4"
+      url "https://github.com/unclepomedev/blup/releases/download/v0.0.8/blup-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "315fd22438e25d0ed8e267d4a4ad6d78a76497c83d1e2559224450eb32039085"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/unclepomedev/blup/releases/download/v0.0.7/blup-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0ef9f7f2f701dfe8be12454faf9e331c4b555ab7d4695b07f382a9bd5d668ccc"
+      url "https://github.com/unclepomedev/blup/releases/download/v0.0.8/blup-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ab3508a09b9a732475cd2c9758107482108c748224dffe4cf484e5f5073f4776"
     end
   end
   license "MIT"
