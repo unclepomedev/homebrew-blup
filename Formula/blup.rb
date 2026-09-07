@@ -1,25 +1,25 @@
 class Blup < Formula
   desc "The Blender Version Manager"
   homepage "https://github.com/unclepomedev/blup"
-  version "0.1.8"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/unclepomedev/blup/releases/download/v0.1.8/blup-aarch64-apple-darwin.tar.xz"
-      sha256 "9936bed34ed8c26bd41d0dbbbe85bceba24e3a3902b3c02b989c908998550dec"
+      url "https://github.com/unclepomedev/blup/releases/download/v0.2.0/blup-aarch64-apple-darwin.tar.xz"
+      sha256 "5ac642aefe3fac30b92694ec13390883ba65f74b057e9a50cb843d0a82b0a9ae"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/unclepomedev/blup/releases/download/v0.1.8/blup-x86_64-apple-darwin.tar.xz"
-      sha256 "2d5bdccd55579c1bf1a678073d3bb10aa4278bda9518a08f60cf48e4c059cd0b"
+      url "https://github.com/unclepomedev/blup/releases/download/v0.2.0/blup-x86_64-apple-darwin.tar.xz"
+      sha256 "850717bbffde03e93979d6e549ed1cdb3cf24cc340b520e37dc0f84d163ef5a7"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/unclepomedev/blup/releases/download/v0.1.8/blup-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "aad6cde5c054721dcf9129dd37aa4729afa2af5c9042bbf120555da1f2974879"
+      url "https://github.com/unclepomedev/blup/releases/download/v0.2.0/blup-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6e159fac2aa68ff939151d918b9948315852cf21f5c0ecec38c01576c49d932a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/unclepomedev/blup/releases/download/v0.1.8/blup-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6099b28e42013936034224c483ae62a5874b6d5c9896ad1ed124650d439ee5cb"
+      url "https://github.com/unclepomedev/blup/releases/download/v0.2.0/blup-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "377b224ac3a01df7299d8364ade5e93b5557e7b4d96b9af5b9f8c673a388047d"
     end
   end
   license "MIT"
@@ -51,10 +51,18 @@ class Blup < Formula
   end
 
   def install
-    bin.install "blup" if OS.mac? && Hardware::CPU.arm?
-    bin.install "blup" if OS.mac? && Hardware::CPU.intel?
-    bin.install "blup" if OS.linux? && Hardware::CPU.arm?
-    bin.install "blup" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "blup"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "blup"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "blup"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "blup"
+    end
 
     install_binary_aliases!
 
